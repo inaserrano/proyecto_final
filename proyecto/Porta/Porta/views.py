@@ -12,7 +12,7 @@ def mi_nombre(request,nombre):
     return HttpResponse(texto)
 
 def probando_template(request):
-    diccionario = {"nombre":"Iñaki","apellido":"Serrano"}
+    diccionario = {"nombre":"Iñaki","apellido":"Serrano","ahora":dt.now()}
     mi_html = open('./Porta/plantillas/index.html') #Abrimos el archivo html
     plantilla = Template(mi_html.read()) #Creamos el template usando la funcion
     mi_html.close() #Cerramos el archivo ya que lo tenemos en la variable plantilla
