@@ -1,6 +1,7 @@
 from datetime import datetime as dt 
 from django.http import HttpResponse
-from django.template import Template, Context
+from django.template import Template, Context, loader
+
 
 def saludo(request):
     dia = dt.now()
@@ -12,10 +13,13 @@ def mi_nombre(request,nombre):
     return HttpResponse(texto)
 
 def probando_template(request):
-    diccionario = {"nombre":"Iñaki","apellido":"Serrano","ahora":dt.now()}
-    mi_html = open('./Porta/plantillas/index.html') #Abrimos el archivo html
-    plantilla = Template(mi_html.read()) #Creamos el template usando la funcion
-    mi_html.close() #Cerramos el archivo ya que lo tenemos en la variable plantilla
-    mi_contexto = Context(diccionario) #Creamos un contexto
-    documento = plantilla.render(mi_contexto) #Terminamos de construir el template renderizandolo con su contexto
-    return HttpResponse(documento) #Corremos
+    
+    notas = [8,6,9,5,7,8]
+    diccionario = {"nombre":"Iñaki","apellido":"Serrano","ahora":dt.now(),"notas":notas}
+    # mi_html = open('./Porta/plantillas/index.html')
+    # plantilla = Template(mi_html.read()) 
+    # mi_html.close() 
+    # mi_contexto = Context(diccionario) 
+    plantilla = loader.get_template('index.html') 
+    dic = plantilla.render(diccionario)
+    return HttpResponse(dic) 

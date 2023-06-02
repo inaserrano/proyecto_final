@@ -7,9 +7,19 @@
     <title>Probando template</title>
 </head>
 <body>
+    AGREGO CAMBIO
     <h1>Hola! Esta es mi primer plantilla :D</h1>
     <p style="color:chartreuse">El apellido es: {{ apellido }}</p>
     <p style="font-family: Arial, Helvetica, sans-serif;">El nombre es: {{ nombre }}</p>
     <p style="color:red">Este Front se creo: {{ ahora }}</p>
+
+    {% for nota in notas %}
+        {% if nota < 7%}
+        <p style="color:red;">La nota {{ nota }} esta desaprobada </p>
+        {% else %}
+        <p style="color:green;">La nota {{nota}} esta aprobada</p>
+        {% endif %}
+    {% endfor %}
+
 </body>
 </html>
