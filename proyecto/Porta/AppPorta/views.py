@@ -18,8 +18,9 @@ def probando_template(request):
     diccionario = {"nombre":"Iñaki","apellido":"Serrano","ahora":dt.now(),"notas":notas}
     #plantilla = loader.get_template('index.html') 
     #dic = plantilla.render(diccionario)
-    #return HttpResponse(dic) 
+    #return HttpResponse(dic)
     return render(request,"AppPorta/index.html")
+
 def curso(request,nombre,numero):
     curso = Curso(nombre=nombre,camada=int(numero))
     curso.save()
