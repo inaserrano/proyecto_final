@@ -23,5 +23,5 @@ urlpatterns = [
     path('saludo/',saludo),
     path('nombre/<nombre>',mi_nombre),
     path('probando_template/',probando_template),
-    path('fecha_app/',pag_)
+    path('fecha_app/',fecha)
 ]

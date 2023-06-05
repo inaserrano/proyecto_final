@@ -4,5 +4,5 @@ from django.db import models
 class Curso(models.Model):
     nombre = models.CharField(max_length=20,default="Python")
     camada = models.IntegerField(default=10000)
-    fecha_create = models.DateTimeField(auto_created=True,null=True)
+    fecha_create = models.DateTimeField(auto_now=True,null=True)
     fecha_update = models.DateTimeField(auto_now=True,null=True)
