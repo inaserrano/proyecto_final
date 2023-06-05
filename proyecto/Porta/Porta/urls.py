@@ -17,10 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import saludo, mi_nombre,probando_template
-
+from AppPorta.views import fecha
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/',saludo),
     path('nombre/<nombre>',mi_nombre),
-    path('probando_template/',probando_template)
+    path('probando_template/',probando_template),
+    path('fecha_app/',pag_)
 ]
