@@ -16,9 +16,6 @@ def mi_nombre(request,nombre):
 def probando_template(request):
     notas = [8,6,9,5,7,8]
     diccionario = {"nombre":"Iñaki","apellido":"Serrano","ahora":dt.now(),"notas":notas}
-    #plantilla = loader.get_template('index.html') 
-    #dic = plantilla.render(diccionario)
-    #return HttpResponse(dic)
     return render(request,"AppPorta/index.html")
 
 def curso(request,nombre,numero):
