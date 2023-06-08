@@ -1,14 +1,10 @@
-
 from django.urls import path
-from .views import(
-    saludo,
-    mi_nombre,
-    probando_template,
-    curso
-)
+from AppPorta import views
+
 urlpatterns = [
-    path('saludo/',saludo),
-    path('nombre/<nombre>',mi_nombre),
-    path('probando_template/',probando_template),
-    path('curso/<nombre>/<numero>/',curso)
+    path('',views.inicio, name='inicio'),
+    path('cursos/',views.cursos, name='curso'),
+    path('profesores/',views.profesores, name='profesor'),
+    path('estudiantes/',views.estudiantes, name='estudiante'),
+    path('entregables/',views.entregables, name='entregable')
 ]
