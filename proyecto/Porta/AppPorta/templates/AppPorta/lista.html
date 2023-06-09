@@ -1,0 +1,17 @@
+
+{% extends 'AppPorta/base.html' %}
+
+{% load static %}
+
+{% block titulo %} 
+    Formulario
+{% endblock titulo %}
+
+{% block main %}
+
+{% for curso in cursos %}
+    <p>Curso: {{ curso.nombre }}</p>
+    <p>Curso: {{ curso.camada }}</p>
+{% endfor  %}
+
+{% endblock main %}

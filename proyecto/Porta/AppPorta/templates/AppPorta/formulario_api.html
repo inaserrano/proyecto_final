@@ -1,0 +1,18 @@
+
+{% extends 'AppPorta/base.html' %}
+
+{% load static %}
+
+{% block titulo %} 
+    Formulario
+{% endblock titulo %}
+
+{% block main %}
+<form action="AppPorta/" method="POST">{% csrf_token %}
+    <table>
+        {{ miFormulario.as_table }}
+    </table>
+    <input type="submit" value="Lessi tonta">
+</form>
+
+{% endblock main %}

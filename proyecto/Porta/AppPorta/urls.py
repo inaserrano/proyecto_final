@@ -6,5 +6,9 @@ urlpatterns = [
     path('cursos/',views.cursos, name='curso'),
     path('profesores/',views.profesores, name='profesor'),
     path('estudiantes/',views.estudiantes, name='estudiante'),
-    path('entregables/',views.entregables, name='entregable')
+    path('entregables/',views.entregables, name='entregable'),
+    path('formulario/', views.formulario, name="Formulario"),
+    path('formulario_api/', views.curso_formulario, name="Form-api"),
+    path('buscar_curso/',views.buscar_curso,name="Buscar-api")
 ]
+

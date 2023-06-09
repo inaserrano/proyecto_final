@@ -1,0 +1,17 @@
+
+{% extends 'AppPorta/base.html' %}
+
+{% load static %}
+
+{% block titulo %} 
+    Formulario
+{% endblock titulo %}
+
+{% block main %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <p> Nombre: <input type="text" name="curso"></p>
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock main %}
